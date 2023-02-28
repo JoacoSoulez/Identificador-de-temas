@@ -1,0 +1,55 @@
+version: "3.0"
+
+intents:
+  - contestan_llamada
+  - afirmativo
+  - negativo
+  - saludo_random
+
+#entities:
+#  - regex:confirmacion
+#slots:
+#  confirmacion:
+#    type: bool
+#    influence_conversation: true
+#    mappings:
+#    - type: from_entity
+#    - entity: regex:confirmacion
+
+
+
+responses:
+  utter_bot_saludo:
+  - text: "Hola, soy el asistente virtual en representacion del Banco Santander, hablo con NOMBRE?"
+
+  utter_bot_validacion_moroso_positivo:
+  - text: "NOMBRE, nos comunicamos del departamento de cobranzas del Banco Santander Rio para informarle que tiene una deuda de $1.000.000.00 Hoy podemos ofrecerle alternativas de pago con importantes descuentos para regularizar su situacion. Le interesa conocer los detalles?"
+
+  utter_bot_validacion_oferta_positiva:
+  - text: "Perfecto NOMBRE. Aguarde en linea mientras transfiero la llamada a un asesor. Si prefiere continuar por mail puede hacerlo a cobranzas_santander@mopc.cc, o al 113988009. Muchas gracias!"
+
+  utter_bot_validacion_oferta_negativa:
+  - text: Entiendo NOMBRE. Le sugerimos que aproveche esta oportunidad, estamos ofreciendo planes de pago con descuento y en cuotas fijas sin interes. Prefiere que lo derive con un asesor para regularizar su situacion y aprovechar estos beneficios?
+
+  utter_bot_validacion_operador_negativo:
+  - text: Entiendo NOMBRE. Le pedimos que analice su situacion y por cualquier consulta se comunica con nosotros por mail a cobranzas_santander@mopc.cc, o al 1139888009 Muchas gracias!
+
+  utter_bot_saludo_random:
+  - text: "Para iniciar con la interaccion escribi hola"
+
+  utter_bot_validacion_moroso_negativo:
+  - text: Entiendo. usted es familiar o conocido de NOMBRE?
+
+  utter_bot_validacion_conocido_positivo:
+  - text: Le pido que aguarde un instante para que un operador tome nota de los datos de contacto correcto. Muchas gracias!
+
+  utter_bot_validacion_conocido_negativo:
+  - text: Entiendo. le pedimos disculpas por las molestias. Muchas gracias!
+
+
+#- action_confirmacion_no:
+#  - utter_confirmacion_no
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

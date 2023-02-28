@@ -1,0 +1,186 @@
+version: "3.0"
+nlu:
+- intent: contestan_llamada
+  examples: |
+    - si
+    - si?
+    - buenas tardes
+    - buenos dias
+    - hola
+    - buenas
+    - buen dia
+    - que tal
+    - que onda
+    - como va
+    - como va?
+- intent: moroso_positivo
+  examples: |
+    - [si](es_moroso)
+    - sisi
+    - que tal
+    - buenas tardes
+    - soy yo
+    - si, soy yo
+    - que necesita?
+    - para que seria?
+    - si, menos mal llamaron
+    - si, decime
+    - decime
+    - si, con el
+    - con el habla
+    - si, con el habla
+    - si con el
+    - [s](es_moroso)
+- intent: moroso_negativo_conocido
+  examples: |
+    - lo conozco
+    - para que lo necesita?
+    - aca no vive
+    - se mudo
+    - no ha llegado
+    - esta trabajando
+    - salio recien
+    - fue a comprar
+    - no puede hablar
+    - no puede atender
+    - si lo conozco
+    - de parte de quien?
+- intent: negativo_equivocado
+  examples: |
+    - equivocado
+    - esto es una empresa
+    - no se quien es esa persona
+    - no conozco a la persona
+    - no se quien es
+    - n
+    - ni idea
+    - ni idea quien es
+    - nono
+- intent: respuesta_random_saludo
+  examples: |
+    - eh?
+    - repetime
+    - de donde?
+    - que es eso?
+    - asdasda
+    - bla
+    - pff
+- intent: moroso_si_quiere_conocer_oferta
+  examples: |
+    - si por favor
+    - bueno
+    - dale
+    - si porfa
+    - por favor
+    - bueno dale
+    - esta bien
+    - me arrepenti
+    - ahora si quiero
+    - de acuerdo
+    - bueno si
+    - s
+    - me interesa
+    - bueno dale
+    - ok
+    - esta bien
+- intent: moroso_no_quiere_conocer_oferta
+  examples: |
+    - por ahora no
+    - no me llamen
+    - no me interesa
+    - dije que no me llamaran mas
+    - no tengo plata
+    - ando sin laburo
+    - soy jubilado y no me alcanza para pagar
+    - saquenme de la base de datos
+    - saquenme del crm
+    - no
+    - na
+    - ne
+    - nah
+    - nel
+    - neh
+    - n
+- intent: moroso_no_quiere_operador
+  examples: |
+    - que no
+    - ahora no puedo
+    - estoy manejando
+    - estoy ocupado
+    - estoy trabajando
+    - llameme en otro horario
+    - no puedo hablar ahora
+    - estoy en audiencia
+    - no gracias
+- intent: si_conoce_moroso
+  examples: |
+    - soy la esposa
+    - soy el esposo
+    - soy la mujer
+    - soy el marido
+    - soy la hermana
+    - soy la mama
+    - soy el papa
+    - soy el hermano
+    - soy el tio
+    - soy la tia
+    - soy la abuela
+    - soy el abuelo
+    - soy amigo
+    - conocido
+    - vecino
+    - soy el primo
+    - soy el sobrino
+    - soy el cunado
+    - soy el ahijado
+    - es mi esposo
+    - es mi esposa
+    - es mi hijo
+- intent: no_conoce_moroso
+  examples: |
+    - no y no llamen mas
+    - ya le dije que no
+    - que no
+    - eliminenme del crm
+    - no y ni idea
+
+
+
+#- intent: moroso_positivo
+#  examples: |
+#    - [si](es_moroso)
+#    - [sisi](es_moroso)
+#    - [que tal](es_moroso)
+#    - [buenas tardes](es_moroso)
+#    - [buenas](es_moroso)
+#    - [soy yo](es_moroso)
+#    - [si, soy yo](es_moroso)
+#    - [que necesita?](es_moroso)
+#    - [para que seria?](es_moroso)
+#    - [si, menos mal llamaron](es_moroso)
+#    - [si, decime](es_moroso)
+#    - [decime](es_moroso)
+#    - [si, con el](es_moroso)
+#    - [con el habla](es_moroso)
+#    - [si, con el habla](es_moroso)
+#    - [si con el](es_moroso)
+#    - [s](es_moroso)
+#    - [soy yo](es_moroso)
+#    - intent: moroso_si_quiere_conocer_oferta
+#  examples: |
+#    - [si por favor](si_quiere)
+#    - [bueno](si_quiere)
+#    - [dale](si_quiere)
+#    - [si porfa](si_quiere)
+#    - [por favor](si_quiere)
+#    - [bueno dale](si_quiere)
+#    - [si](si_quiere)
+#    - [esta bien](si_quiere)
+#    - [cambie de opinion](si_quiere)
+#    - [me arrepenti](si_quiere)
+#    - [ahora si quiero](si_quiere)
+#    - [de acuerdo](si_quiere)
+#    - [bueno si](si_quiere)
+#    - [s](si_quiere)
+#    - me interesa
+#    - [bueno dale](si_quiere)

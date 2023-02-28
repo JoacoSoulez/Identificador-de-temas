@@ -1,0 +1,54 @@
+version: "3.0"
+
+stories:
+
+
+
+- story: happy positive path
+  steps:
+  - intent: contestan_llamada
+  - action: utter_bot_saludo
+  - intent: afirmativo
+  - action: utter_bot_validacion_moroso_positivo
+  - intent: afirmativo
+  - action: utter_bot_validacion_oferta_positiva
+
+- story: happy neutral path
+  steps:
+  - intent: contestan_llamada
+  - action: utter_bot_saludo
+  - intent: afirmativo
+  - action: utter_bot_validacion_moroso_positivo
+  - intent: negativo
+  - action: utter_bot_validacion_oferta_negativa
+  - intent: afirmativo
+  - action: utter_bot_validacion_oferta_positiva
+
+- story: negative path
+  steps:
+  - intent: contestan_llamada
+  - action: utter_bot_saludo
+  - intent: afirmativo
+  - action: utter_bot_validacion_moroso_positivo
+  - intent: negativo
+  - action: utter_bot_validacion_oferta_negativa
+  - intent: negativo
+  - action: utter_bot_validacion_operador_negativo
+
+- story: acquaintance path
+  steps:
+  - intent: contestan_llamada
+  - action: utter_bot_saludo
+  - intent: negativo
+  - action: utter_bot_validacion_moroso_negativo
+  - intent: afirmativo
+  - action: utter_bot_validacion_conocido_positivo
+
+- story: unknown path
+  steps:
+  - intent: contestan_llamada
+  - action: utter_bot_saludo
+  - intent: negativo
+  - action: utter_bot_validacion_moroso_negativo
+  - intent: negativo
+  - action: utter_bot_validacion_conocido_negativo
