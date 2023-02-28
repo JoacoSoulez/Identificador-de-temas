@@ -1,0 +1,280 @@
+version: "3.0"
+
+stories:
+
+- story: interactive_story_0
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: afirmacion
+  - action: action_utter_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: afirmacion
+  - action: utter_oferta_Whatsapp
+  - intent: afirmacion
+  - action: utter_desvio
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_01
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: afirmacion
+  - action: action_utter_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: afirmacion
+  - action: utter_oferta_Whatsapp
+  - intent: negacion
+  - action: utter_operadora
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_02
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: afirmacion
+  - action: action_utter_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: negacion
+  - action: utter_oportunidad
+  - intent: afirmacion
+  - action: utter_oferta_Whatsapp
+  - intent: negacion
+  - action: utter_operadora
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_03
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: afirmacion
+  - action: action_utter_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: negacion
+  - action: utter_oportunidad
+  - intent: afirmacion
+  - action: utter_oferta_Whatsapp
+  - intent: afirmacion
+  - action: utter_desvio
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+
+- story: interactive_story_04
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: afirmacion
+  - action: action_utter_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: negacion
+  - action: utter_oportunidad
+  - intent: negacion
+  - action: utter_situacion
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_05
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: negacion
+  - action: action_utter_persona_incorrecta
+  - slot_was_set:
+    - reconoce_identidad: false
+  - intent: afirmacion
+  - action: utter_contactabilidad
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_06
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: 'FRANCES_2012        '
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_presentacion
+  - action: utter_verificacion_identidad
+  - intent: negacion
+  - action: action_utter_persona_incorrecta
+  - slot_was_set:
+    - reconoce_identidad: false
+  - intent: negacion
+  - action: utter_disculpas
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: COTO
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_coto_presentacion
+  - intent: greet
+  - action: action_utter_verificacion_identidad_coto
+  - intent: afirmacion
+  - action: action_utter_coto_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: afirmacion
+  - action: utter_coto_pago_positivo
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: COTO
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_coto_presentacion
+  - intent: greet
+  - action: action_utter_verificacion_identidad_coto
+  - intent: afirmacion
+  - action: action_utter_coto_informe_deuda
+  - slot_was_set:
+    - reconoce_identidad: true
+  - intent: negacion
+  - action: utter_coto_pago_negativo
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart
+
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  # - action: action_SQL
+  - action: preparar_slots_por_cliente
+  - slot_was_set:
+    - nombre_entidad: COTO
+  - slot_was_set:
+    - nombre_cliente: 'FERRIGNO RICARDO S                      '
+  - slot_was_set:
+    - monto_adeudado: nan
+  - slot_was_set:
+    - deuda_minima: 60000.0
+  - action: action_utter_definicion
+  - action: action_utter_coto_presentacion
+  - intent: greet
+  - action: action_utter_verificacion_identidad_coto
+  - intent: negacion
+  - action: action_utter_coto_persona_incorrecta
+  - slot_was_set:
+    - reconoce_identidad: false
+  - intent: goodbye
+  - action: action_utter_goodbye
+  # - action: action_restart

@@ -1,0 +1,22 @@
+version: "3.0"
+
+# rules:
+# - rule: buscar cliente
+#   steps:
+#   - intent: greet
+#   - action: action_SQL
+#   - action: preparar_slots_por_cliente
+#   - action: action_utter_definicion
+#   wait_for_user_input: false
+
+# - rule: buscar deuda coto
+#   steps:
+#   - action: action_utter_coto_presentacion
+#   - action: action_utter_verificacion_identidad_coto
+#   wait_for_user_input: false
+
+# - rule: buscar deuda
+#   steps:
+#   - action: action_utter_presentacion
+#   - action: action_utter_verificacion_identidad
+#   wait_for_user_input: false

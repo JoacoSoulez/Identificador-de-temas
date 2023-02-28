@@ -1,0 +1,87 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - allo
+    - buenos dias
+    - buenas tardes
+    - hola
+    - quien es?
+    - hable
+    - quien habla?
+    - hola quien es?
+    - si el habla
+    - si ella habla
+    - buen dia
+    - si quien habla?
+    - hola quien habla?
+    - habla
+    - diga
+    - si diga
+    - hola, si
+    - Hola Hola
+
+- intent: goodbye
+  examples: |
+    - chau
+    - chau chau
+    - adios
+    - gracias chau
+    - chau gracias
+    - hasta luego
+    - buenas noches 
+    - buenas tardes
+    - muchas gracias
+    - hasta la proxima
+    - hasta pronto
+    - Ok, chau
+    - chauuuu
+    - Okey, chao
+    - Okey chau
+    - A dios
+    - chau, hasta luego
+    - Hasta lueguito
+
+- intent: afirmacion
+  examples: |
+    - yes
+    - si
+    - exacto
+    - claro
+    - ok
+    - okay
+    - bueno
+    - dale
+    - esta bien
+    - correcto
+    - si si
+    - sisi
+    - me parece
+    - creo que si
+    - es posible
+    - seguramente
+    - afirmativo
+    - claro que si
+    - obvio
+    - obviamente
+    - por supuesto
+
+- intent: negacion
+  examples: |
+    - no
+    - nono
+    - no no
+    - no gracias
+    - no me interesa
+    - no creo
+    - no esta bien
+    - no por ahora
+    - no en este momento
+    - na
+    - no para nada
+    - por supuesto que no
+    - no estoy seguro
+    - de momento no
+    - por ahora no
+    - para nada

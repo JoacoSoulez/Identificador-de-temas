@@ -1,0 +1,137 @@
+version: "3.0"
+
+intents:
+- greet
+- goodbye
+- afirmacion
+- negacion
+- welcome_message
+
+actions:
+- action_utter_presentacion
+- action_utter_verificacion_identidad
+- action_utter_persona_incorrecta
+- preparar_slots_por_cliente
+- action_utter_informe_deuda
+- action_SQL
+- action_utter_definicion
+- action_utter_coto_presentacion
+- action_utter_coto_informe_deuda
+- action_utter_coto_persona_incorrecta
+- action_utter_verificacion_identidad_coto
+- action_restart
+- action_utter_goodbye
+
+
+
+# entities:
+# - nombre_cliente
+# - nombre_entidad
+# - monto_adeudado
+# - reconoce_identidad
+# - conoce_como_pagar
+
+slots:
+  nombre_cliente:
+    type: text
+    mappings:
+    - type: custom
+
+  nombre_entidad:
+    type: text
+    mappings:
+    - type: custom
+
+  monto_adeudado:
+    type: text
+    mappings:
+    - type: custom
+
+  deuda_minima:
+    type: text
+    mappings:
+    - type: custom
+
+  reconoce_identidad:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  conoce_como_pagar:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+
+responses:
+  utter_presentacion:
+  - text: Hola, soy el asistente virtual de MOPC Argentina en representación del banco {nombre_entidad}?
+
+  utter_verificacion_identidad:
+  - text: ¿Hablo con {nombre_cliente}?
+    # buttons:
+    #   - title: "Si"
+    #     payload: '/afirmacion{{"reconoce_identidad": true}}'
+    #   - title: "No"
+    #     payload: '/negacion{{"reconoce_identidad": false}}'
+
+  utter_informe_deuda:
+  - text: Nos comunicamos del departamento de cobranzas de {nombre_entidad} para informarle que tiene una deuda de $ {monto_adeudado}. ¿Desea conocer las ofertas para regularizar su situación? Responda con si o no.
+
+  utter_oportunidad:
+  - text: "Le sugerimos que aproveche esta oportunidad ya que MOPC le ofrece planes de pago con descuento y en cuotas fijas sin intereses. ¿Desea conocer estos beneficios?"
+
+  utter_situacion:
+  - text: "Le pedimos que analice su situación y se comunique vía WhatsApp al XX-XXXX-XXXX para obtener la mejor solución. Le repito el número XX-XXXX-XXXX ¡Muchas gracias!"
+
+  utter_persona_incorrecta:
+  - text: "¿Conoce a esta persona?"
+
+  utter_contactabilidad:
+  - text: "Aguarde en línea. Un operador tomará nota de los datos de contactabilidad o puede comunicarse vía WhatsApp al XX-XXXX-XXXX. Tenemos beneficios que no querrá perderse. Le repito el número XX-XXXX-XXXX"
+
+  utter_disculpas:
+  - text: "Lamento haberlo molestado. Muchas gracias"
+
+  # utter_disculpas2:
+  # - text: "Lamento haberlo molestado. Muchas gracias"
+
+  utter_operadora:
+  - text: "Por favor, aguarde en línea y un operador se comunicará con usted para ofrecerle el mejor plan para su situación. Muchas gracias."
+
+  utter_desvio:
+  - text: "Puede conocer las mismas vía WhatsApp, indicando su DNI al número XX-XXXX-XXXX. Le repito el número XX-XXXX-XXXX. Muchas gracias."
+
+  utter_oferta_Whatsapp :
+  - text: "Podemos comunicarles las mismas vía WhatsApp. ¿Desea utilizar este medio? Responda con Si o No"
+
+  utter_coto_presentacion:
+  - text: Hola soy el asistente virtual de Tarieta TCI Coto.
+  #¿Hablo con {nombre_cliente}?
+
+  utter_coto_informe_deuda:
+  - text: "Nos comunicamos del departamento de cobranzas de la tarjeta TCI Coto para informarle que tiene una deuda de ${monto_adeudado}, con un pago mínimo de ${deuda_minima}. ¿Podrá realizar el pago en las próximos 48 horas? En caso de ya haber pagado deje sin efecto el llamado."
+
+  utter_coto_persona_incorrecta:
+  - text: Si conoce a {nombre_cliente} por favor informele que se comunique con Tarjeta CI Coto al 5071-0404 de lunes a viernes de 9 a 21 hs y sábados de 9 a 17 hs. Muchas gracias.
+
+  utter_coto_duda_pago_positivo:
+  - text: ¡Perfecto! Recorda que podes realizar el pago en cualquier sucursal de supermercados Coto, Pagofacil, MercadoPago o transferencia bancaria dentro de las próximas 48 horas. ¿Tiene alguna duda sobre como realizar el pago?
+
+  utter_coto_pago_negativo:
+  - text: Le recomendamos que se comunique al 5071-0404 para conocer la causa de su deuda e intentar regularizar su situación. Muchas gracias.
+
+  utter_coto_pago_positivo:
+  - text: Puede realizar el pago en cualquier sucursal de supermercados Coto con su Tarjeta TCI y su DNI, PagoFacil y MercadoPago con su resumen de cuenta actual y transterencia bancaria con su numero de cuenta.
+
+  utter_coto_no_duda:
+  - text: Su compromiso para las próximas 48 hs fue registrado. Muchas gracias.
+
+  utter_goodbye:
+  - text: "Chau"
+
+session_config:
+  session_expiration_time: 20
+  carry_over_slots_to_new_session: true

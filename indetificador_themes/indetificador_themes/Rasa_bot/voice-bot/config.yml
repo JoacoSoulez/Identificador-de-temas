@@ -1,0 +1,24 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: es
+
+pipeline:
+  - name: "SpacyNLP"
+    model: es_core_news_lg
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "DIETClassifier"
+    random_seed: 10
+    entity_recognition: False
+    epochs: 100
+
+policies:
+  - name: RulePolicy
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    random_seed: 10
+  #- name: MappingPolicy
