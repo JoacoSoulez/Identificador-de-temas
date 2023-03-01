@@ -17,7 +17,7 @@ import re
 # https://rasa.com/docs/rasa/custom-actions
 
 lista = []
-# conn = pymssql.connect(server='192.168.120.120', user='jsoulez', password='Mopc2022*', database='master')
+# conn = pymssql.connect(server='192.168.120.120', user='jsoulez', password='*******', database='master')
 # cur = conn.cursor()
 # query = """SELECT top 3 cartera.IDMOROSO, cartera.IDCLIENTE,moroso.NOMBRE, producto.TOTALDEUDA, producto.VALORCUOTA, producto.TOTALPAGOS, producto.FULTPAGO, contabilidad.TIPO, contabilidad.SUBTIPO, contabilidad.DATO FROM Active.dbo.CARTERA as cartera
 #             JOIN
@@ -44,7 +44,7 @@ bbdd = pd.read_csv('bbdd.csv')
 #     def run(self, dispatcher: CollectingDispatcher,
 #             tracker: Tracker,
 #             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         conn = pymssql.connect(server='192.168.120.120', user='jsoulez', password='Mopc2022*', database='master')
+#         conn = pymssql.connect(server='192.168.120.120', user='jsoulez', password='*******', database='master')
 #         cur = conn.cursor()
 #         query = """SELECT top 3 cartera.IDMOROSO, cartera.IDCLIENTE,moroso.NOMBRE, producto.TOTALDEUDA, producto.VALORCUOTA, producto.TOTALPAGOS, producto.FULTPAGO, contabilidad.TIPO, contabilidad.SUBTIPO, contabilidad.DATO FROM Active.dbo.CARTERA as cartera
 #                     JOIN
